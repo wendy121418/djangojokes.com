@@ -1,0 +1,14 @@
+{% extends "_base.html" %} <!--  PAGE 93 -->
+
+{% block title %}Add/Update Joke{% endblock %}
+{% block main %}
+<div class="card border-primary m-auto mb-3 p-3" style="max-width: 30rem">
+    <form method="post">
+        {% csrf_token %} <!-- template tag – This is a security measure that protects against cross site request forgery -->
+        <table class="table">
+            {{ form }} <!-- The form variable: {{ form }} – This will output the form fields and their labels. -->
+        </table>
+        <button class="btn btn-success float-end">Submit</button>
+    </form>
+</div>
+{% endblock %}
